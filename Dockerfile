@@ -1,7 +1,15 @@
 FROM ubuntu
 
 RUN apt-get update \
-    && apt-get install -y autoconf autotools-dev libtool wget build-essential gcc libattr1-dev zlib1g-dev libyaml-0-2 \
+    && apt-get install -y
+       autoconf \
+       autotools-dev \
+       build-essential \
+       gcc \
+       libattr1-dev \       
+       libtool \
+       wget \
+       zlib1g-dev libyaml-0-2 \
     && wget http://ftp.software.ibm.com/storage/tivoli-storage-management/maintenance/client/v7r1/Linux/LinuxX86_DEB/BA/v716/7.1.6.0-TIV-TSMBAC-LinuxX86_DEB.tar \
     && tar xf 7.1.6.0-TIV-TSMBAC-LinuxX86_DEB.tar \
     && dpkg -i gskssl64_8.0-50.66.linux.x86_64.deb \
