@@ -19,7 +19,7 @@ RUN apt-get update \
     && wget https://github.com/tstibor/ltsm.github.io/raw/master/lustre/lustre-builds/jessie/client/2.10/2.10.1/lustre-dev_2.10.1-1_amd64.deb \
     && dpkg -i lustre-client-utils_2.10.1-1_amd64.deb \
     && dpkg -i lustre-dev_2.10.1-1_amd64.deb \
-    && wget https://github.com/tstibor/ltsm/archive/master.tar.gz -O ltsm.tar.gz \
+    && wget https://github.com/Munken/ltsm/archive/master.tar.gz -O ltsm.tar.gz \
     && tar xf ltsm.tar.gz \
     && cd /ltsm-master \ 
     && ./autogen.sh && ./configure CFLAGS='-g -DDEBUG -O0' --enable-tests \
