@@ -25,5 +25,6 @@ RUN apt-get update \
     && ./autogen.sh && ./configure CFLAGS='-g -DDEBUG -O0' --enable-tests \
     && make \
     && cd .. \
-    && rm -rf *.tar.gz *.tar *.deb
+    && rm -rf *.tar.gz *.tar *.deb \
+    && ldconfig
     
